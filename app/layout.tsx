@@ -1,6 +1,6 @@
 import "../styles/globals.css";
 import Link from "next/link";
-import { GithubIcon, TwitterIcon } from "../assets/Icons";
+import { Contact } from "./Contact";
 
 export default function RootLayout({
   children,
@@ -25,7 +25,7 @@ export default function RootLayout({
 const Header = () => {
   return (
     <nav className="flex justify-between items-center h-16 text-gray-300 max-w-7xl mx-auto px-4 md:px-8">
-      <div className="flex md:space-x-12 space-x-4">
+      <div className="flex md:space-x-12 space-x-6">
         <Link href="/" className="hover:underline">
           Home
         </Link>
@@ -44,42 +44,8 @@ const Header = () => {
           Blog
         </a>
       </div>
-      <div className="flex items-center md:space-x-12 space-x-4">
-        <a
-          href="https://github.com/exploreraadi"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <GithubIcon className="hover:opacity-50" />
-        </a>
-        <a
-          href="https://twitter.com/exploreraadi"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <TwitterIcon className="hover:opacity-50" />
-        </a>
-      </div>
+      <div></div>
     </nav>
-  );
-};
-
-const Contact = () => {
-  return (
-    <div className="flex flex-col justify-center items-center h-[600px] space-y-6 max-w-lg text-center mx-auto px-8">
-      <h1
-        className="text-5xl font-semibold bg-gradient-to-r from-violet-500 via-pink-500 to-orange-500 bg-clip-text text-transparent"
-        style={{ fontFamily: "Lato" }}
-      >
-        Get in touch.
-      </h1>
-      <p className="text-gray-300" style={{ fontFamily: "Work Sans" }}>
-        Have an exciting opportunity for me or simply want to drop for a chat?{" "}
-        <a href="mailto:hey@exploreraadi.com" className="underline">
-          Say hi.
-        </a>
-      </p>
-    </div>
   );
 };
 

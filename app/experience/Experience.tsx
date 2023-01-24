@@ -26,7 +26,7 @@ export const Experience = () => {
           className="max-w-4xl flex flex-col justify-center items-center space-y-6 h-full mx-auto px-4"
         >
           <h3
-            className="font-semibold bg-clip-text text-transparent bg-gradient-to-r from-violet-500 via-pink-500 to-orange-500 text-5xl"
+            className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-violet-500 via-pink-500 to-orange-500 text-4xl sm:text-5xl lg:text-6xl"
             style={{ fontFamily: "Lato" }}
           >
             Experience
