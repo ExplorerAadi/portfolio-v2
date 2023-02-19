@@ -27,20 +27,17 @@ export const Home = () => {
           and a conversationalist by nature.
         </p>
       </motion.div>
-      <motion.div
-        initial={{ y: -25, opacity: 0 }}
-        animate={inView ? { y: 0, opacity: 1 } : { y: -25, opacity: 0 }}
-        transition={{ duration: 0.4, delay: 0.4 }}
-        className="mr-10 md:m-0 max-w-2xl"
-      >
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
+      <div className="mr-10 md:m-0 max-w-2xl">
+        <motion.img
           className="h-full w-full object-contain"
           src="boy-3d.png"
           alt=""
           ref={inViewRef}
+          initial={{ y: -25, opacity: 0 }}
+          animate={inView ? { y: 0, opacity: 1 } : { y: -25, opacity: 0 }}
+          transition={{ duration: 0.4, delay: 0.4 }}
         />
-      </motion.div>
+      </div>
     </div>
   );
 };

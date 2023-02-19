@@ -70,7 +70,12 @@ const Companies = ({
   link: string;
   duration: string;
   styles: { [key: string]: string };
-  contributionData: { title: string; summary: string; data: string[] }[];
+  contributionData: {
+    title: string;
+    summary: string;
+    logo: string;
+    data: string[];
+  }[];
 }) => {
   const [isExpanded, setIsExpanded] = useState(title === "Plaza");
   const [ref, { height }] = useMeasure();
@@ -119,6 +124,7 @@ const Companies = ({
               key={c.title}
               title={c.title}
               summary={c.summary}
+              logo={c.logo}
               contributionData={c.data}
               index={index}
               isExpanded={isExpanded}
@@ -133,12 +139,14 @@ const Companies = ({
 const Contribution = ({
   title,
   summary,
+  logo,
   contributionData,
   index,
   isExpanded,
 }: {
   title: string;
   summary: string;
+  logo: string;
   contributionData: string[];
   index: number;
   isExpanded: boolean;
@@ -163,8 +171,15 @@ const Contribution = ({
           {isExpanded && (
             <motion.div exit={{ y: -20, opacity: 0 }}>
               <div className="flex items-center space-x-4 sm:space-x-8">
-                {/* Add image here */}
-                <div className="w-10 h-10 border rounded-md rotate-45 bg-black shrink-0"></div>
+                <div className="w-10 h-10 shrink-0 relative">
+                  <div className="border rounded-md rotate-45 bg-black absolute w-full h-full"></div>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  {/* <img
+                    src={logo}
+                    alt=""
+                    className="h-6 w-6 absolute left-2 top-2 object-contain"
+                  /> */}
+                </div>
                 <div className="text-xl font-medium">
                   {title}
                   <p className="text-sm text-gray-500 font-normal">{summary}</p>
@@ -203,6 +218,7 @@ const companiesData = [
         title: "Plaza Page",
         summary:
           "A customizable storefront for creators to showcase their favorite products, affiliate links, etc.",
+        logo: "",
         data: [
           "Worked on creating a dynamic and configurable UI for creators where they can have a catalog of their recommended products, affiliate links, etc.",
           "It has OAuth login for users to help them track the creators they are following and products they have wishlisted/ordered and supports a variety of themes that a creator can configure to match better with their personal brand.",
@@ -215,6 +231,7 @@ const companiesData = [
         title: "Creator App",
         summary:
           "A mobile app for creators to manage and customize their storefront and get all the analytics in one place.",
+        logo: "",
         data: [
           "Having no prior experience with mobile apps, picked up react-native on the fly and started contributing to small features within weeks.",
           "Initially we needed to add flows for adding and editing products but that required users to fill multiple fields and ended up creating a huge form so I worked on breaking it into multiple modular flows across different screens for a better UX.",
@@ -225,6 +242,7 @@ const companiesData = [
         title: "Dashboard",
         summary:
           "A web dashboard for creators to customize their storefront UI and manage products, links, etc.",
+        logo: "",
         data: [
           "Worked on a complex form that enabled the creators to choose from a variety of themes and configure other aspects of their Plaza page like reordering the tabs, setting button shapes, etc. Also added a preview experience just beside the form to help them see the effect of their changes in real-time.",
           "Contributed to a small design system that we came up with to help us iterate faster. It included buttons with different states, form fields of different input types (some styled and some unstyled), custom hooks like media upload etc.",
@@ -234,6 +252,7 @@ const companiesData = [
         title: "Miscellaneous",
         summary:
           "Some contributions that didn't affect any product individually but rather as a whole.",
+        logo: "",
         data: [
           "Images are the soul of an e-commerce platform but there was a major problems with ours - the dimension and orientation varied a lot because we didn't control the type of images being uploaded which made the UI inconsistent.",
           "I took the help of a third party provider called Cloudinary to apply on the fly transformations on the image and also control their dpi to preserve the quality while keeping their size small. I optimised it even further in our mobile app by using react-native-fast-image to cache the image on user’s device after the first load.",
@@ -256,6 +275,7 @@ const companiesData = [
         title: "Messaging App",
         summary:
           "A cross-platform desktop messaging app for a telecommunication giant in U.S.",
+        logo: "",
         data: [
           "I had to pick up three new technologies - Electron, Redux and Typescript on the fly when I joined the startup while fixing bugs but still started contributing to the codebase meaningfully within a few weeks.",
           "Got handed over my first feature request when I was just 2 months into the job which was to build an OTP component for our sign up screen and there began the journey of constant learnings and bigger mistakes.",
