@@ -35,63 +35,101 @@ export const Projects = () => {
             <div className="sm:w-2/3 max-w-2xl space-y-3">
               <video
                 className="h-full w-full rounded-md"
-                src="./menu_animation.mov"
+                src="./giftwise-demo.mov"
                 autoPlay
                 loop
               />
               <div className="space-y-1 hover:text-white text-gray-400">
                 <div className="flex items-center justify-between">
-                  <h3 className="text-xl font-medium text-white">
-                    Micro Interactions
-                  </h3>
+                  <h3 className="text-xl font-medium text-white">Giftwise</h3>
                   <div className="flex space-x-4 items-center">
                     <a
                       target="_blank"
                       rel="noreferrer"
-                      href="https://styling-and-interactions.vercel.app/hamburger"
+                      href="https://giftwise.vercel.app"
                     >
                       <ExternalLink className="h-6 w-6" />
                     </a>
                     <a
                       target="_blank"
                       rel="noreferrer"
-                      href="https://github.com/ExplorerAadi/styling-and-interactions"
+                      href="https://github.com/ExplorerAadi/giftwise"
                     >
                       <GithubIcon className="h-7 w-7" />
                     </a>
                   </div>
                 </div>
                 <p className="text-sm leading-5 transition-all duration-400 text-ellipsis line-clamp-2">
-                  An ever-growing set of components that are a result of my
-                  experiments with micro-interactions. It currently utilizes the
-                  best of Tailwind CSS and Framer Motion but I will be adding
-                  some 3D ones soon too.
+                  A gift recommendation app built with GPT-3 and launched during
+                  Valentine&apos;s week for personalised gifting recommendations
+                  that generated 100s of recommendations within hours.
                 </p>
               </div>
             </div>
           </motion.div>
 
-          <div className="w-full mt-12">
-            <MidSection
-              title="Intersection Counter"
-              desc="A library to track the count of elements yet to enter the
+          <div className="flex flex-col sm:flex-row items-end space-x-10 mt-12 space-y-12 sm:space-y-0">
+            <div className="w-full">
+              <MidSection
+                title="Intersection Counter"
+                desc="A library to track the count of elements yet to enter the
                   viewport and be used to build features like unread count of
                   unread messages."
-              media="./intersection_counter.mp4"
-              githubLink="https://github.com/ExplorerAadi/intersection-counter"
-            />
+                media="./intersection_counter.mp4"
+                githubLink="https://github.com/ExplorerAadi/intersection-counter"
+              />
+            </div>
+
+            <div className="w-full sm:flex flex-col items-end">
+              <MidSection
+                title="Micro Interactions"
+                desc="An ever-growing set of components that are a result of my
+              experiments with micro-interactions. It currently utilizes the
+              best of Tailwind CSS and Framer Motion but I will be adding
+              some 3D ones soon too."
+                media="/menu_animation.mov"
+                githubLink="https://github.com/ExplorerAadi/styling-and-interactions"
+                externalLink="https://styling-and-interactions.vercel.app/hamburger"
+              />
+            </div>
           </div>
 
-          <div className="w-full sm:flex flex-col items-end mt-12 sm:-mt-48">
-            <MidSection
-              title="Google Keep Clone"
-              desc="A Google Keep Clone that to replicate their grid UI with
+          <motion.div
+            initial={{ y: -25, opacity: 0 }}
+            animate={inView ? { y: 0, opacity: 1 } : { y: -25, opacity: 0 }}
+            transition={{ duration: 0.4 }}
+            className="w-full flex justify-center items-center mt-12"
+          >
+            <div className="sm:w-2/3 max-w-2xl space-y-3">
+              <video
+                className="h-full w-full rounded-md"
+                src="/google_keep_clone.mov"
+                autoPlay
+                loop
+              />
+              <div className="space-y-1 hover:text-white text-gray-400">
+                <div className="flex items-center justify-between">
+                  <h3 className="text-xl font-medium text-white">
+                    Google Keep Clone
+                  </h3>
+                  <div className="flex space-x-4 items-center">
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      href="https://github.com/ExplorerAadi/google-keep-clone"
+                    >
+                      <GithubIcon className="h-7 w-7" />
+                    </a>
+                  </div>
+                </div>
+                <p className="text-sm leading-5 transition-all duration-400 text-ellipsis line-clamp-2">
+                  A Google Keep Clone that to replicate their grid UI with
                   animations and dark mode including state management using
-                  redux-toolkit."
-              media="./google_keep_clone.mov"
-              githubLink="https://github.com/ExplorerAadi/google-keep-clone"
-            />
-          </div>
+                  redux-toolkit.
+                </p>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </div>
     </div>
@@ -115,7 +153,7 @@ const MidSection = ({
 
   return (
     <div
-      className="sm:w-[46%] max-w-2xl hover:text-white text-gray-400 hover:cursor-pointer"
+      className="hover:text-white text-gray-400 hover:cursor-pointer"
       ref={inViewRef}
     >
       <motion.div
