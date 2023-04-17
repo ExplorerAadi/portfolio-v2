@@ -89,7 +89,7 @@ export const Projects = () => {
               some 3D ones soon too."
                 media="/menu_animation.mov"
                 githubLink="https://github.com/ExplorerAadi/styling-and-interactions"
-                externalLink="https://styling-and-interactions.vercel.app/hamburger"
+                externalLink="https://styling-and-interactions.vercel.app"
               />
             </div>
           </div>
