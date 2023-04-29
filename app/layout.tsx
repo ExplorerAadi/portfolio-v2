@@ -16,7 +16,6 @@ export default function RootLayout({
           <Header />
           {children}
           <Contact />
-          <Footer />
         </div>
       </body>
     </html>
@@ -47,22 +46,5 @@ const Header = () => {
       </div>
       <div></div>
     </nav>
-  );
-};
-
-const Footer = () => {
-  return (
-    <footer className="flex flex-col justify-center items-center h-12 text-gray-600 mx-auto absolute bottom-0 w-full text-xs">
-      <p>
-        Design inspired from{" "}
-        <a
-          href="https://www.seanhalpin.design"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Sean Halpin.
-        </a>
-      </p>
-    </footer>
   );
 };
