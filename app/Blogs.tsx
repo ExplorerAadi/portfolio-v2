@@ -34,7 +34,7 @@ export const Blogs = () => {
 const LinkPreview = ({
   metadata,
 }: {
-  metadata: { title: string; description: string; image: string };
+  metadata: { title: string; description: string; image: string; link: string };
 }) => {
   // const [metadata, setMetadata] = useState<{
   //   title: string;
@@ -70,14 +70,16 @@ const LinkPreview = ({
   // }, [url]);
 
   return (
-    <div className="w-full h-full bg-white/5 p-4 rounded-lg">
+    <a className="w-full h-full bg-white/5 p-4 rounded-lg" href={metadata.link}>
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img src={metadata.image} alt="Link preview" />
-      <h3 className="text-xl font-semibold mt-4 line-clamp-1">
+      <h3 className="text-xl font-semibold mt-4 line-clamp-1 text-gray-100">
         {metadata.title}
       </h3>
-      <p className="line-clamp-4 mt-2">{metadata.description}</p>
-    </div>
+      <p className="line-clamp-4 text-sm mt-2 text-gray-400">
+        {metadata.description}
+      </p>
+    </a>
   );
 };
 
@@ -88,6 +90,7 @@ const blogMetaData = [
       "My name is Aditya and I am a College dropout currently building the future of commerce at Plaza with some really smart and driven people. I got my first job amidst the pandemic in 2020. Link to my full story.  Now moving on, I will share some rules t...",
     image:
       "https://hashnode.com/utility/r?url=https%3A%2F%2Fcdn.hashnode.com%2Fres%2Fhashnode%2Fimage%2Fupload%2Fv1629345324444%2FwYeYuxip3.jpeg%3Fw%3D1200%26h%3D630%26fit%3Dcrop%26crop%3Dentropy%26auto%3Dcompress%2Cformat%26format%3Dwebp%26fm%3Dpng",
+    link: "https://blog.exploreraadi.com/lessons-from-my-first-software-engineering-job",
   },
   {
     title: "Developer Journey of a Failure Student",
@@ -95,6 +98,7 @@ const blogMetaData = [
       "In 2018, when I passed out of high school, I did what most Indian high school grads from the science stream do. I took a year off to prepare for the JEE exam that can get me into an IIT. But something strange happened in that one year. Along with pre...",
     image:
       "https://hashnode.com/utility/r?url=https%3A%2F%2Fcdn.hashnode.com%2Fres%2Fhashnode%2Fimage%2Fupload%2Fv1623564399306%2FTx1ax1Qun.jpeg%3Fw%3D1200%26h%3D630%26fit%3Dcrop%26crop%3Dentropy%26auto%3Dcompress%2Cformat%26format%3Dwebp%26fm%3Dpng",
+    link: "https://blog.exploreraadi.com/developer-journey-of-a-failure-student",
   },
   {
     title: "Uploading images the right way",
@@ -102,5 +106,6 @@ const blogMetaData = [
       "Images are an important part of any web application so writing a clean upload logic is very important. Let's create a custom react hook to handle that.",
     image:
       "https://hashnode.com/utility/r?url=https%3A%2F%2Fcdn.hashnode.com%2Fres%2Fhashnode%2Fimage%2Fupload%2Fv1670387280040%2F6ZV9FMor5.jpg%3Fw%3D1200%26h%3D630%26fit%3Dcrop%26crop%3Dentropy%26auto%3Dcompress%2Cformat%26format%3Dwebp%26fm%3Dpng",
+    link: "https://blog.exploreraadi.com/uploading-images-the-right-way",
   },
 ];
