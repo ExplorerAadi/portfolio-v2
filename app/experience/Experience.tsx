@@ -84,7 +84,7 @@ const Companies = ({
     <>
       <button
         className={classNames(
-          "px-4 sm:px-12 py-4 rounded-md flex items-center justify-between w-full bg-gradient-to-r",
+          "px-4 sm:px-12 py-4 rounded-md flex items-center justify-between w-full bg-gradient-to-r text-gray-100",
           styles.background
         )}
         onClick={() => setIsExpanded(!isExpanded)}
@@ -156,7 +156,7 @@ const Contribution = ({
   return (
     <div ref={ref}>
       <motion.div
-        className="px-4 sm:px-8"
+        className="px-4 sm:px-8 text-gray-100"
         initial={{ y: -20, opacity: 0 }}
         animate={
           inView && isExpanded ? { y: 0, opacity: 1 } : { y: -20, opacity: 0 }
