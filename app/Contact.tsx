@@ -8,6 +8,12 @@ export const Contact = () => {
   const { ref: inViewRef, inView } = useInView({ triggerOnce: true });
 
   return (
+    <div className="h-20 flex items-center justify-center text-gray-600 text-center">
+      Built with ❤️ by Aditya Raj
+    </div>
+  );
+
+  return (
     <div
       className="max-w-lg text-center mx-auto px-8 h-[600px] lg:h-[800px] flex flex-col items-center justify-center"
       ref={inViewRef}

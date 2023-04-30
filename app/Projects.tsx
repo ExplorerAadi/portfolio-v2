@@ -11,23 +11,23 @@ export const Projects = () => {
   const { ref: inViewRef, inView } = useInView({ triggerOnce: true });
 
   return (
-    <div className="flex justify-center min-h-screen mx-auto container px-4 sm:px-16">
+    <div className="flex justify-center pt-52">
       <div className="w-full" ref={inViewRef}>
         <motion.div
           initial={{ y: -25, opacity: 0 }}
           animate={inView ? { y: 0, opacity: 1 } : { y: -25, opacity: 0 }}
           transition={{ duration: 0.4 }}
-          className="flex w-full items-center justify-center"
+          className="flex w-full items-center"
         >
           <h2
-            className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-violet-500 via-pink-500 to-orange-500 text-4xl sm:text-5xl lg:text-6xl pb-8 lg:pb-16 max-w-fit"
+            className="text-4xl sm:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-violet-500 via-pink-500 to-orange-400 bg-clip-text text-transparent max-w-xl pb-2 sm:pb-4"
             style={{ fontFamily: "Lato" }}
           >
             Projects
           </h2>
         </motion.div>
         <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 700: 2 }}>
-          <Masonry style={{ gap: "16px" }}>
+          <Masonry style={{ gap: "8px" }}>
             <ProjectCard
               title="Giftwise"
               desc="A gift recommendation app built with GPT-3 and launched
@@ -94,9 +94,9 @@ const ProjectCard = ({
         initial={{ y: -25, opacity: 0 }}
         animate={inView ? { y: 0, opacity: 1 } : { y: -25, opacity: 0 }}
         transition={{ duration: 0.4 }}
-        className="w-full flex justify-center items-start mt-4"
+        className="w-full flex justify-center items-start mt-2"
       >
-        <div className="space-y-3 p-4 bg-white/5 rounded-lg">
+        <div className="space-y-3 p-2 bg-white/5 rounded-lg">
           <video
             className="h-full w-full rounded-md"
             src={media}
