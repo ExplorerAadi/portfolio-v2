@@ -7,40 +7,33 @@ import { useInView } from "react-intersection-observer";
 import { ChevronDownIcon } from "../../assets/Icons";
 import { classNames } from "../../utils";
 
-export const Experience = () => {
+export const Work = () => {
   const { ref: inViewRef, inView } = useInView({ triggerOnce: true });
 
   return (
-    <MotionConfig transition={{ duration: 0.4, ease: "easeIn" }}>
-      <div
-        className="h-96"
-        style={{
-          background:
-            "linear-gradient(180deg,#111 20%,rgba(20,44,105,0) 60%),#1a1a1a",
-        }}
-        ref={inViewRef}
-      >
-        <motion.div
-          initial={{ y: -25, opacity: 0 }}
-          animate={inView ? { y: 0, opacity: 1 } : { y: -25, opacity: 0 }}
-          className="max-w-4xl flex flex-col justify-center items-center space-y-6 h-full mx-auto px-4"
-        >
-          <h3
-            className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-violet-500 via-pink-500 to-orange-500 text-4xl sm:text-5xl lg:text-6xl"
-            style={{ fontFamily: "Lato" }}
+    <div className="min-h-[calc(100vh-148px)]">
+      <MotionConfig transition={{ duration: 0.4, ease: "easeIn" }}>
+        <div className="pt-8 sm:pt-32" ref={inViewRef}>
+          <motion.div
+            initial={{ y: -25, opacity: 0 }}
+            animate={inView ? { y: 0, opacity: 1 } : { y: -25, opacity: 0 }}
+            className="flex flex-col justify-center items-left space-y-6 lg:space-y-16 h-full"
           >
-            Experience
-          </h3>
-          <p
-            className="text-gray-300 max-w-xl text-center"
+            <h3
+              className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-violet-500 via-pink-500 to-orange-500 text-4xl sm:text-5xl lg:text-6xl pb-2 sm:pb-6"
+              style={{ fontFamily: "Lato" }}
+            >
+              Professional highlights
+            </h3>
+            {/* <p
+            className="text-gray-300 max-w-xl"
             style={{ fontFamily: "Work Sans" }}
           >
             Detailed professional experience showing some of the major
             contributions I had in my past work.
-          </p>
-        </motion.div>
-      </div>
-      <div className="max-w-4xl mx-auto mt-20 px-4">
+          </p> */}
+          </motion.div>
+        </div>
         {companiesData.map((c) => (
           <Companies
             key={c.link}
@@ -52,8 +45,8 @@ export const Experience = () => {
             contributionData={c.contributionData}
           />
         ))}
-      </div>
-    </MotionConfig>
+      </MotionConfig>
+    </div>
   );
 };
 
@@ -84,7 +77,7 @@ const Companies = ({
     <>
       <button
         className={classNames(
-          "px-4 sm:px-12 py-4 rounded-md flex items-center justify-between w-full bg-gradient-to-r",
+          "px-4 sm:px-12 py-4 rounded-md flex items-center justify-between w-full bg-gradient-to-r text-gray-100",
           styles.background
         )}
         onClick={() => setIsExpanded(!isExpanded)}
@@ -156,7 +149,7 @@ const Contribution = ({
   return (
     <div ref={ref}>
       <motion.div
-        className="px-4 sm:px-8"
+        className="px-4 sm:px-8 text-gray-100"
         initial={{ y: -20, opacity: 0 }}
         animate={
           inView && isExpanded ? { y: 0, opacity: 1 } : { y: -20, opacity: 0 }

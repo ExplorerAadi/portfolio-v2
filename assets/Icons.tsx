@@ -169,7 +169,6 @@ export const ExternalLink = ({ className }: { className: string }) => {
         fillRule: "evenodd",
         clipRule: "evenodd",
         strokeLinejoin: "round",
-        strokeMiterlimit: 2,
       }}
     >
       <rect
@@ -278,6 +277,51 @@ export const ExternalLink = ({ className }: { className: string }) => {
 
         <g id="Layer1"></g>
       </g>
+    </svg>
+  );
+};
+
+export const EmailIcon = ({ className }: { className: string }) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      fill="none"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+      <path
+        d="M22 7.535v9.465a3 3 0 0 1 -2.824 2.995l-.176 .005h-14a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-9.465l9.445 6.297l.116 .066a1 1 0 0 0 .878 0l.116 -.066l9.445 -6.297z"
+        stroke-width="0"
+        fill="currentColor"
+      ></path>
+      <path
+        d="M19 4c1.08 0 2.027 .57 2.555 1.427l-9.555 6.37l-9.555 -6.37a2.999 2.999 0 0 1 2.354 -1.42l.201 -.007h14z"
+        stroke-width="0"
+        fill="currentColor"
+      ></path>
+    </svg>
+  );
+};
+
+export const ArrowRight = ({ className }: { className: string }) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      fill="none"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <line x1="5" y1="12" x2="19" y2="12" />
+      <line x1="15" y1="16" x2="19" y2="12" />
+      <line x1="15" y1="8" x2="19" y2="12" />
     </svg>
   );
 };
