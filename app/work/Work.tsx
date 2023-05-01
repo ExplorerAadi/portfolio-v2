@@ -11,7 +11,7 @@ export const Work = () => {
   const { ref: inViewRef, inView } = useInView({ triggerOnce: true });
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-[calc(100vh-148px)]">
       <MotionConfig transition={{ duration: 0.4, ease: "easeIn" }}>
         <div className="pt-8 sm:pt-32" ref={inViewRef}>
           <motion.div
