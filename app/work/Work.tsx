@@ -17,7 +17,7 @@ export const Work = () => {
           <motion.div
             initial={{ y: -25, opacity: 0 }}
             animate={inView ? { y: 0, opacity: 1 } : { y: -25, opacity: 0 }}
-            className="flex flex-col justify-center items-left space-y-6 h-full"
+            className="flex flex-col justify-center items-left space-y-6 lg:space-y-16 h-full"
           >
             <h3
               className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-violet-500 via-pink-500 to-orange-500 text-4xl sm:text-5xl lg:text-6xl pb-2 sm:pb-6"

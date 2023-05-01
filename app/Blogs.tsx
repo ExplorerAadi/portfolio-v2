@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import React from "react";
 import { useInView } from "react-intersection-observer";
+import { ArrowRight } from "../assets/Icons";
 
 export const Blogs = () => {
   const { ref: inViewRef, inView } = useInView({ triggerOnce: true });
@@ -16,16 +17,19 @@ export const Blogs = () => {
         className="flex w-full items-center"
       >
         <h2
-          className="text-4xl sm:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-violet-500 via-pink-500 to-orange-400 bg-clip-text text-transparent max-w-xl pb-2 sm:pb-6"
+          className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-violet-500 via-pink-500 to-orange-400 bg-clip-text text-transparent max-w-xl pb-2 md:pb-6"
           style={{ fontFamily: "Lato" }}
         >
           Blogs
         </h2>
       </motion.div>
-      <div className="flex flex-col sm:flex-row items-center sm:space-x-4 justify-center sm:justify-start h-full space-y-4 sm:space-y-0">
+      <div className="flex flex-col md:flex-row items-center md:space-x-4 justify-center md:justify-start h-full space-y-4 md:space-y-0">
         {blogMetaData.map((metadata) => (
           <LinkPreview metadata={metadata} key={metadata.title} />
         ))}
+        <div className="p-2 border rounded-full border-gray-600 hidden sm:block">
+          <ArrowRight className="w-10 h-full text-gray-600 shrink-0" />
+        </div>
       </div>
     </div>
   );
