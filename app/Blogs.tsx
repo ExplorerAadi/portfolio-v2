@@ -103,7 +103,7 @@ const blogMetaData = [
   {
     title: "Uploading images the right way",
     description:
-      "Images are an important part of any web application so writing a clean upload logic is very important. Let's create a custom react hook to handle that.",
+      "Images are an important part of any web application so writing a clean upload logic is very important. In this article, we will try to create a custom react hook to handle that logic which can later be extended to support video uploads easily as well.",
     image:
       "https://hashnode.com/utility/r?url=https%3A%2F%2Fcdn.hashnode.com%2Fres%2Fhashnode%2Fimage%2Fupload%2Fv1670387280040%2F6ZV9FMor5.jpg%3Fw%3D1200%26h%3D630%26fit%3Dcrop%26crop%3Dentropy%26auto%3Dcompress%2Cformat%26format%3Dwebp%26fm%3Dpng",
     link: "https://blog.exploreraadi.com/uploading-images-the-right-way",

@@ -10,7 +10,7 @@ export const Home = () => {
 
   return (
     <>
-      <div className="flex-col-reverse flex md:flex-row items-center justify-center pt-20">
+      <div className="flex-col-reverse flex md:flex-row items-center justify-center pt-12 sm:pt-20">
         <motion.div
           initial={{ y: -25, opacity: 0 }}
           animate={inView ? { y: 0, opacity: 1 } : { y: -25, opacity: 0 }}
