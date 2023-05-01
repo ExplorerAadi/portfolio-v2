@@ -27,9 +27,14 @@ export const Blogs = () => {
         {blogMetaData.map((metadata) => (
           <LinkPreview metadata={metadata} key={metadata.title} />
         ))}
-        <div className="p-2 border rounded-full border-gray-600 hidden sm:block">
-          <ArrowRight className="w-10 h-full text-gray-600 shrink-0" />
-        </div>
+        <a
+          href="https://blog.exploreraadi.com"
+          target="_blank"
+          rel="noreferrer"
+          className="p-2 border rounded-full border-gray-600 hidden sm:block hover:scale-110 transition-all duration-300"
+        >
+          <ArrowRight className="w-8 h-full text-gray-600 shrink-0" />
+        </a>
       </div>
     </div>
   );

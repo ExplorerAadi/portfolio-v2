@@ -14,7 +14,7 @@ export const About = () => {
   const { ref: inViewRef, inView } = useInView({ triggerOnce: true });
 
   return (
-    <div className="pt-8 sm:pt-32 min-h-screen" ref={inViewRef}>
+    <div className="pt-8 sm:pt-32 min-h-[calc(100vh-148px)]" ref={inViewRef}>
       <MotionConfig transition={{ duration: 0.4, ease: "easeIn" }}>
         {/* <motion.div
           initial={{ y: -25, opacity: 0 }}
