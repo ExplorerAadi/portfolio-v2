@@ -44,7 +44,6 @@ export const Projects = () => {
               viewport and be used to build features like unread count of
               unread messages."
               media="./intersection_counter.mp4"
-              // externalLink=""
               githubLink="https://github.com/ExplorerAadi/intersection-counter"
             />
             <ProjectCard
@@ -113,11 +112,7 @@ const ProjectCard = ({
                   </a>
                 )}
                 {githubLink && (
-                  <a
-                    target="_blank"
-                    rel="noreferrer"
-                    href="https://github.com/ExplorerAadi/google-keep-clone"
-                  >
+                  <a target="_blank" rel="noreferrer" href={githubLink}>
                     <GithubIcon className="h-7 w-7" />
                   </a>
                 )}

@@ -109,18 +109,16 @@ const Companies = ({
         transition={{ duration: 0.8 }}
       >
         <div
-          className={classNames("my-14", isExpanded ? "pb-24" : "")}
+          className={classNames("my-10", isExpanded ? "pb-24" : "")}
           ref={ref}
         >
           {contributionData.map((c, index) => (
             <Contribution
               key={c.title}
-              title={c.title}
-              summary={c.summary}
-              logo={c.logo}
-              contributionData={c.data}
+              contributionData={c}
               index={index}
               isExpanded={isExpanded}
+              isLast={index === contributionData.length - 1}
             />
           ))}
         </div>
@@ -130,26 +128,28 @@ const Companies = ({
 };
 
 const Contribution = ({
-  title,
-  summary,
-  logo,
   contributionData,
   index,
   isExpanded,
+  isLast,
 }: {
-  title: string;
-  summary: string;
-  logo: string;
-  contributionData: string[];
+  contributionData: {
+    title: string;
+    summary: string;
+    logo: string;
+    data: string[];
+  };
   index: number;
   isExpanded: boolean;
+  isLast: boolean;
 }) => {
   const { ref, inView } = useInView({ triggerOnce: true });
+  const { title, summary, logo, data } = contributionData;
 
   return (
     <div ref={ref}>
       <motion.div
-        className="px-4 sm:px-8 text-gray-100"
+        className="pr-2 sm:px-14 text-gray-100"
         initial={{ y: -20, opacity: 0 }}
         animate={
           inView && isExpanded ? { y: 0, opacity: 1 } : { y: -20, opacity: 0 }
@@ -163,15 +163,14 @@ const Contribution = ({
         <AnimatePresence>
           {isExpanded && (
             <motion.div exit={{ y: -20, opacity: 0 }}>
-              <div className="flex items-center space-x-4 sm:space-x-8">
-                <div className="w-10 h-10 shrink-0 relative">
-                  <div className="border rounded-md rotate-45 bg-black absolute w-full h-full"></div>
+              <div className="flex items-center space-x-4 sm:space-x-5">
+                <div className="sm:w-14 sm:h-14 h-10 w-10 shrink-0 relative my-3">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  {/* <img
+                  <img
                     src={logo}
                     alt=""
-                    className="h-6 w-6 absolute left-2 top-2 object-contain"
-                  /> */}
+                    className="h-full w-full absolute left-0 top-0 object-contain"
+                  />
                 </div>
                 <div className="text-xl font-medium">
                   {title}
@@ -180,12 +179,12 @@ const Contribution = ({
               </div>
               <div
                 className={classNames(
-                  "ml-5 pl-9 sm:pl-[52px] border-gray-800 pt-4 pb-12 space-y-4 text-gray-300",
-                  "border-l"
+                  "ml-5 sm:ml-7 pl-8 sm:pl-[48px] border-gray-800 space-y-4 text-gray-300 border-l",
+                  isLast ? "pb-0" : "pb-12"
                 )}
               >
-                {contributionData.map((data) => (
-                  <p key={data}>{data}</p>
+                {data.map((d) => (
+                  <p key={d}>{d}</p>
                 ))}
               </div>
             </motion.div>
@@ -211,31 +210,29 @@ const companiesData = [
         title: "Plaza Page",
         summary:
           "A customizable storefront for creators to showcase their favorite products, affiliate links, etc.",
-        logo: "",
+        logo: "/shopping-bag.png",
         data: [
-          "Worked on creating a dynamic and configurable UI for creators where they can have a catalog of their recommended products, affiliate links, etc.",
-          "It has OAuth login for users to help them track the creators they are following and products they have wishlisted/ordered and supports a variety of themes that a creator can configure to match better with their personal brand.",
-          "We had to improve our SEO because an ecommerce page catering to influencers need better visibility so I worked on making the pages web crawler friendly and also better preview experience.",
-          "Collecting data is another important aspect of ecommerce so we needed accurate analytics to get better insight about the pages and show it to creators as well. I contributed to setting up precise event capturing using the right tools for every user interaction happening on the page.",
-          "And finally, a storefront needs a checkout page so created a checkout flow with a similar UX of what the users were used to (in our case - Shopify) so that they don't feel the friction of being on a different platform.",
+          "Developed a dynamic and configurable UI for creators that includes a catalog of their recommended products and affiliate links. Users can log in via OAuth to track the creators they follow, and keep track of wishlisted and ordered products.",
+          "The UI supports a variety of themes to match each creator's personal brand. To improve SEO, I made the ecommerce pages more web crawler-friendly and enhanced the preview experience. Accurate analytics were crucial for collecting data and providing insight to creators, so I helped set up event capturing for every user interaction on the page.",
+          "Lastly, worked on a checkout flow with a UX similar to Shopify to reduce user friction that generated the first revenue of the company.",
         ],
       },
       {
         title: "Creator App",
         summary:
           "A mobile app for creators to manage and customize their storefront and get all the analytics in one place.",
-        logo: "",
+        logo: "/user-interface.png",
         data: [
-          "Having no prior experience with mobile apps, picked up react-native on the fly and started contributing to small features within weeks.",
-          "Initially we needed to add flows for adding and editing products but that required users to fill multiple fields and ended up creating a huge form so I worked on breaking it into multiple modular flows across different screens for a better UX.",
-          "After picking up pace, another major feature I worked on was a date range picker similar to what you will see in the insights screen of a public Instagram account. We needed it for, you guessed it, our analytics screen to show insights as per selected date ranges.",
+          "Picked up React Native and co-authored the creator app from scratch.",
+          "One of our immediate needs were to improve the flows for adding and editing products. However, we faced the challenge of creating a huge form that required users to fill out multiple fields, which made the user experience cumbersome. I took on the task of breaking down the process into multiple modular flows across different screens, resulting in a much-improved user experience.",
+          "Took on major features after gaining momentum like a date range picker similar to the insights screen of a public Instagram account, a complex multi-part form wizard for customizing creator page themes, generic image and video upload components, etc.",
         ],
       },
       {
         title: "Dashboard",
         summary:
           "A web dashboard for creators to customize their storefront UI and manage products, links, etc.",
-        logo: "",
+        logo: "/shopping.png",
         data: [
           "Worked on a complex form that enabled the creators to choose from a variety of themes and configure other aspects of their Plaza page like reordering the tabs, setting button shapes, etc. Also added a preview experience just beside the form to help them see the effect of their changes in real-time.",
           "Contributed to a small design system that we came up with to help us iterate faster. It included buttons with different states, form fields of different input types (some styled and some unstyled), custom hooks like media upload etc.",
@@ -245,7 +242,7 @@ const companiesData = [
         title: "Miscellaneous",
         summary:
           "Some contributions that didn't affect any product individually but rather as a whole.",
-        logo: "",
+        logo: "/settings.png",
         data: [
           "Images are the soul of an e-commerce platform but there was a major problems with ours - the dimension and orientation varied a lot because we didn't control the type of images being uploaded which made the UI inconsistent.",
           "I took the help of a third party provider called Cloudinary to apply on the fly transformations on the image and also control their dpi to preserve the quality while keeping their size small. I optimised it even further in our mobile app by using react-native-fast-image to cache the image on user’s device after the first load.",
@@ -268,7 +265,7 @@ const companiesData = [
         title: "Messaging App",
         summary:
           "A cross-platform desktop messaging app for a telecommunication giant in U.S.",
-        logo: "",
+        logo: "/messenger.png",
         data: [
           "I had to pick up three new technologies - Electron, Redux and Typescript on the fly when I joined the startup while fixing bugs but still started contributing to the codebase meaningfully within a few weeks.",
           "Got handed over my first feature request when I was just 2 months into the job which was to build an OTP component for our sign up screen and there began the journey of constant learnings and bigger mistakes.",

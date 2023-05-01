@@ -8,7 +8,7 @@ export const Contact = () => {
   const { ref: inViewRef, inView } = useInView({ triggerOnce: true });
 
   return (
-    <div className="h-16 flex items-center justify-center text-gray-600 text-center sticky bottom-0">
+    <div className="h-16 flex items-center justify-center text-gray-600 text-center sticky bottom-0 pt-10">
       Built with ❤️ by Aditya Raj
     </div>
   );

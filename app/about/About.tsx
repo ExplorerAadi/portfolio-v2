@@ -117,28 +117,28 @@ export const About = () => {
                   href="mailto:hey@exploreraadi.com"
                   target="_blank"
                   rel="noreferrer"
-                  className="items-center inline-flex text-gray-600 group transition-all duration-300 hover:border-b-gray-600 border-b border-b-transparent"
+                  className="items-center inline-flex text-gray-300 group transition-all duration-300 hover:border-b-gray-300 border-b border-b-transparent"
                 >
                   hey@exploreraadi.com
-                  <EmailIcon className="ml-1 w-6 text-gray-600 transition-all duration-300 group-hover:scale-125" />
+                  <EmailIcon className="ml-1.5 w-6 transition-all duration-300 group-hover:scale-125" />
                 </a>
                 <a
-                  href="https://blog.exploreraadi.com/developer-journey-of-a-failure-student"
+                  href="https://github.com/ExplorerAadi"
                   target="_blank"
                   rel="noreferrer"
-                  className="items-center inline-flex text-gray-600 group transition-all duration-300 hover:border-b-gray-600 border-b border-b-transparent"
+                  className="items-center inline-flex text-gray-300 group transition-all duration-300 hover:border-b-gray-300 border-b border-b-transparent"
                 >
                   @ExplorerAadi
-                  <GithubIcon className="ml-1 w-6 text-gray-600 transition-all duration-300 group-hover:scale-125" />
+                  <GithubIcon className="ml-1.5 w-6 transition-all duration-300 group-hover:scale-125" />
                 </a>
                 <a
-                  href="https://blog.exploreraadi.com/developer-journey-of-a-failure-student"
+                  href="https://twitter.com/ExplorerAadi"
                   target="_blank"
                   rel="noreferrer"
-                  className="items-center inline-flex text-gray-600 group transition-all duration-300 hover:border-b-gray-600 border-b border-b-transparent"
+                  className="items-center inline-flex text-gray-300 group transition-all duration-300 hover:border-b-gray-300 border-b border-b-transparent"
                 >
                   @ExplorerAadi
-                  <TwitterIcon className="ml-1 w-6 text-gray-600 transition-all duration-300 group-hover:scale-125" />
+                  <TwitterIcon className="ml-1.5 w-6 transition-all duration-300 group-hover:scale-125" />
                 </a>
               </div>
             </div>
