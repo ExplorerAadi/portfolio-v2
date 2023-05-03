@@ -83,7 +83,7 @@ export const About = () => {
               <p className="mt-4">
                 Currently, I am working at{" "}
                 <a
-                  href="https://blog.exploreraadi.com/developer-journey-of-a-failure-student"
+                  href="https://useplaza.com"
                   target="_blank"
                   rel="noreferrer"
                   className="border-orange-500 border-b-2 transition-all duration-400"
