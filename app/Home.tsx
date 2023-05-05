@@ -34,7 +34,7 @@ export const Home = () => {
         <div className="mr-10 md:m-0 max-w-2xl">
           <motion.img
             className="h-full w-full object-contain"
-            src="boy-3d.png"
+            src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/v1683309249/boy-3d_ulbzto.png`}
             alt=""
             ref={inViewRef}
             initial={{ y: -25, opacity: 0 }}

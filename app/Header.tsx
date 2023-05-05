@@ -9,7 +9,7 @@ export const Header = () => {
 
   return (
     <nav className="flex justify-between items-center h-20 text-gray-300">
-      <div className="flex space-x-4 items-center">
+      <div className="flex space-x-2 sm:space-x-4 items-center">
         {links.map((link) => (
           <>
             {link.isExternal ? (
