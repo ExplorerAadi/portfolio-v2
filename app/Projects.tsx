@@ -34,7 +34,7 @@ export const Projects = () => {
               during Valentine's week for personalised gifting
               recommendations that generated 100s of recommendations
               within hours."
-              media={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/video/upload/v1683310460/giftwise-demo_lhfort.mov`}
+              media={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/video/upload/c_fit,h_2160,q_60,w_1440/v1683310460/giftwise-demo_lhfort.mov`}
               externalLink="https://giftwise.vercel.app"
               githubLink="https://github.com/ExplorerAadi/giftwise"
             />
@@ -43,7 +43,7 @@ export const Projects = () => {
               desc="A library to track the count of elements yet to enter the
               viewport and be used to build features like unread count of
               unread messages."
-              media={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/video/upload/v1683310461/intersection_counter_guo2zq.mov`}
+              media={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/video/upload/c_fit,h_2160,q_60,w_1440/v1683310461/intersection_counter_guo2zq.mov`}
               githubLink="https://github.com/ExplorerAadi/intersection-counter"
             />
             <ProjectCard
@@ -51,7 +51,7 @@ export const Projects = () => {
               desc="A Google Keep Clone that to replicate their grid UI with
               animations and dark mode including state management using
               redux-toolkit."
-              media={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/video/upload/v1683310461/google_keep_clone_jgg0tp.mov`}
+              media={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/video/upload/c_fit,h_2160,q_60,w_1440/v1683310461/google_keep_clone_jgg0tp.mov`}
               githubLink="https://github.com/ExplorerAadi/google-keep-clone"
               externalLink="https://google-keep-clone-mauve.vercel.app"
             />
@@ -61,7 +61,7 @@ export const Projects = () => {
               experiments with micro-interactions. It currently utilizes
               the best of Tailwind CSS and Framer Motion but I will be
               adding some 3D ones soon too."
-              media={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/video/upload/v1683310460/menu_animation_gns0ji.mov`}
+              media={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/video/upload/c_fit,h_2160,q_60,w_1440/v1683310460/menu_animation_gns0ji.mov`}
               githubLink="https://github.com/ExplorerAadi/styling-and-interactions"
               externalLink="https://styling-and-interactions.vercel.app"
             />
