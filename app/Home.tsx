@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import "../styles/globals.css";
 
@@ -11,7 +11,7 @@ export const Home = () => {
   return (
     <>
       <div className="flex-col-reverse flex md:flex-row items-center justify-center pt-12 sm:pt-20">
-        <motion.div
+        <m.div
           initial={{ y: -25, opacity: 0 }}
           animate={inView ? { y: 0, opacity: 1 } : { y: -25, opacity: 0 }}
           transition={{ duration: 0.4 }}
@@ -30,9 +30,9 @@ export const Home = () => {
             I&apos;m Aditya - a frontend engineer by profession, a writer by
             heart and a conversationalist by nature.
           </p>
-        </motion.div>
+        </m.div>
         <div className="mr-10 md:m-0 max-w-2xl">
-          <motion.img
+          <m.img
             className="h-full w-full object-contain"
             src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,h_3000,q_auto:good/v1683309249/boy-3d_ulbzto.png`}
             alt=""

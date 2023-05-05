@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import "../styles/globals.css";
@@ -13,7 +13,7 @@ export const Projects = () => {
   return (
     <div className="flex justify-center pt-52">
       <div className="w-full" ref={inViewRef}>
-        <motion.div
+        <m.div
           initial={{ y: -25, opacity: 0 }}
           animate={inView ? { y: 0, opacity: 1 } : { y: -25, opacity: 0 }}
           transition={{ duration: 0.4 }}
@@ -25,7 +25,7 @@ export const Projects = () => {
           >
             Projects
           </h2>
-        </motion.div>
+        </m.div>
         <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 700: 2 }}>
           <Masonry style={{ gap: "8px" }}>
             <ProjectCard
@@ -89,7 +89,7 @@ const ProjectCard = ({
 
   return (
     <div className="text-gray-400" ref={inViewRef}>
-      <motion.div
+      <m.div
         initial={{ y: -25, opacity: 0 }}
         animate={inView ? { y: 0, opacity: 1 } : { y: -25, opacity: 0 }}
         transition={{ duration: 0.4 }}
@@ -123,7 +123,7 @@ const ProjectCard = ({
             </p>
           </div>
         </div>
-      </motion.div>
+      </m.div>
     </div>
   );
 };

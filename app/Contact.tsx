@@ -1,7 +1,7 @@
 "use client";
 
 import { GithubIcon, TwitterIcon } from "../assets/Icons";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 export const Contact = () => {
@@ -18,7 +18,7 @@ export const Contact = () => {
       className="max-w-lg text-center mx-auto px-8 h-[600px] lg:h-[800px] flex flex-col items-center justify-center"
       ref={inViewRef}
     >
-      <motion.div
+      <m.div
         initial={{ y: -25, opacity: 0 }}
         animate={inView ? { y: 0, opacity: 1 } : { y: -25, opacity: 0 }}
         transition={{ duration: 0.4 }}
@@ -52,7 +52,7 @@ export const Contact = () => {
             <TwitterIcon className="hover:opacity-50 h-8 w-8" />
           </a>
         </div>
-      </motion.div>
+      </m.div>
     </div>
   );
 };
