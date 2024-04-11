@@ -200,7 +200,7 @@ const companiesData = [
     role: "Frontend Engineer",
     title: "Plaza",
     link: "https://useplaza.com",
-    duration: "May 2021 - Present",
+    duration: "May 2021 - July 2023",
     styles: {
       textColor: "text-violet-400",
       background: "bg-gradient-to-r from-[#16082c] to-[#16082c00]",

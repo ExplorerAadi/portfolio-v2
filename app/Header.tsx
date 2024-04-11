@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { classNames } from "../utils";
+import { Fragment } from "react";
 
 export const Header = () => {
   const pathname = usePathname();
@@ -11,7 +12,7 @@ export const Header = () => {
     <nav className="flex justify-between items-center h-20 text-gray-300">
       <div className="flex space-x-2 sm:space-x-4 items-center">
         {links.map((link) => (
-          <>
+          <Fragment key={link.url}>
             {link.isExternal ? (
               <a
                 href="https://blog.exploreraadi.com"
@@ -36,7 +37,7 @@ export const Header = () => {
                 {link.title}
               </Link>
             )}
-          </>
+          </Fragment>
         ))}
       </div>
       <div></div>

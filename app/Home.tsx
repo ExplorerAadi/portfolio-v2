@@ -14,7 +14,7 @@ export const Home = () => {
         <m.div
           initial={{ y: -25, opacity: 0 }}
           animate={inView ? { y: 0, opacity: 1 } : { y: -25, opacity: 0 }}
-          transition={{ duration: 0.4 }}
+          transition={{ duration: 0.4, delay: 0.4 }}
           className="space-y-6 w-80 sm:w-96 md:w-full md:max-w-lg"
         >
           <h1
@@ -39,7 +39,7 @@ export const Home = () => {
             ref={inViewRef}
             initial={{ y: -25, opacity: 0 }}
             animate={inView ? { y: 0, opacity: 1 } : { y: -25, opacity: 0 }}
-            transition={{ duration: 0.4, delay: 0.4 }}
+            transition={{ duration: 0.4 }}
           />
         </div>
       </div>

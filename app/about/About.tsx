@@ -14,7 +14,7 @@ export const About = () => {
   const { ref: inViewRef, inView } = useInView({ triggerOnce: true });
 
   return (
-    <div className="pt-8 sm:pt-32 min-h-[calc(100vh-148px)]" ref={inViewRef}>
+    <div className="pt-8 sm:py-32 min-h-[calc(100vh-148px)]" ref={inViewRef}>
       <MotionConfig transition={{ duration: 0.4, ease: "easeIn" }}>
         {/* <m.div
           initial={{ y: -25, opacity: 0 }}
@@ -69,7 +69,7 @@ export const About = () => {
                 <ArrowRight className="ml-1 w-6 text-gray-600 transition-all duration-300 group-hover:scale-125" />
               </a>
               <p className="mt-4">
-                Over the last 3+ years, I&apos;ve built user experiences across
+                Over the last 4+ years, I&apos;ve built user experiences across
                 different domains of frontend engineering including web apps,
                 mobile apps, and even desktop apps.{" "}
               </p>
@@ -83,21 +83,20 @@ export const About = () => {
               <p className="mt-4">
                 Currently, I am working at{" "}
                 <a
-                  href="https://useplaza.com"
+                  href="https://subskribe.com"
                   target="_blank"
                   rel="noreferrer"
                   className="border-orange-500 border-b-2 transition-all duration-400"
                 >
-                  Plaza
+                  Subskribe
                 </a>{" "}
-                - an early stage startup building for social commerce and my
-                time is spent working across both frontend and backend of two
-                web apps and a mobile app, researching and being updated with
-                the latest frontend technologies and mentoring new team members.
+                - the modern all in one quote-to-revenue platform for SaaS
+                companies and my time is spent between shipping new features and
+                jumping on ad-hoc customer requests.
               </p>
               <p className="mt-4">
                 Apart from work, you&apos;ll find me reading books, writing
-                blogs, tinkering with some latest tech or interacting with
+                blogs, tinkering with latest technologies or interacting with
                 industry professionals either on Twitter or in-person because I
                 love to listen to their journeys and learn from their
                 experiences.
