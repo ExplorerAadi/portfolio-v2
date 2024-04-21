@@ -19,8 +19,8 @@ export const Header = () => {
                 target="_blank"
                 rel="noreferrer"
                 className={classNames(
-                  pathname === link.url ? "bg-white/5" : "bg-transparent",
-                  "rounded-full px-5 py-1 hover:bg-white/5"
+                  pathname === link.url ? "bg-white/10" : "bg-transparent",
+                  "rounded-full px-5 py-1 hover:bg-white/10"
                 )}
               >
                 {link.title}
@@ -30,8 +30,8 @@ export const Header = () => {
                 key={link.title}
                 href={link.url}
                 className={classNames(
-                  pathname === link.url ? "bg-white/5" : "bg-transparent",
-                  "rounded-full px-5 py-1 hover:bg-white/5"
+                  pathname === link.url ? "bg-white/10" : "bg-transparent",
+                  "rounded-full px-5 py-1 hover:bg-white/10"
                 )}
               >
                 {link.title}
