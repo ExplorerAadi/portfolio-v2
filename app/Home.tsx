@@ -31,7 +31,7 @@ export const Home = () => {
             heart and a conversationalist by nature.
           </p>
         </m.div>
-        <div className="mr-10 md:m-0 max-w-2xl">
+        <div className="mr-10 md:m-0 max-w-2xl min-h-[40%] min-w-[40%]">
           <m.img
             className="h-full w-full object-contain"
             src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,h_2160,q_auto:good/v1683309249/boy-3d_ulbzto.png`}
