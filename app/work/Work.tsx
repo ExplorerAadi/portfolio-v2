@@ -59,8 +59,8 @@ const Companies = ({
   contributionData,
 }: {
   role: string;
-  title: string;
-  link: string;
+  title?: string;
+  link?: string;
   duration: string;
   styles: { [key: string]: string };
   contributionData: {
@@ -70,7 +70,7 @@ const Companies = ({
     data: string[];
   }[];
 }) => {
-  const [isExpanded, setIsExpanded] = useState(title === "Plaza");
+  const [isExpanded, setIsExpanded] = useState(title === "Subskribe");
   const [ref, { height }] = useMeasure();
 
   return (
@@ -84,15 +84,17 @@ const Companies = ({
       >
         <div className="flex flex-col items-start sm:block">
           {role}{" "}
-          <a
-            className={classNames("hover:underline", styles.textColor)}
-            onClick={(e) => e.stopPropagation()}
-            href={link}
-            target="_blank"
-            rel="noreferrer"
-          >
-            @{title}
-          </a>
+          {title && (
+            <a
+              className={classNames("hover:underline", styles.textColor)}
+              onClick={(e) => e.stopPropagation()}
+              href={link}
+              target="_blank"
+              rel="noreferrer"
+            >
+              @{title}
+            </a>
+          )}
         </div>
         <div className="flex items-center space-x-4 text-gray-300">
           <span className="w-28 sm:w-auto">{duration}</span>
@@ -197,7 +199,30 @@ const Contribution = ({
 
 const companiesData = [
   {
-    role: "Frontend Engineer",
+    role: "Senior Frontend Engineer",
+    title: "Subskribe",
+    link: "https://www.subskribe.com",
+    duration: "Aug 2023 - Present",
+    styles: {
+      textColor: "text-pink-400",
+      background: "bg-gradient-to-r from-[#1a1119] to-[#1a111900]",
+    },
+    contributionData: [
+      {
+        title: "Subskribe",
+        summary:
+          "A unified quoting, billing, and revenue recognition platform for SaaS companies,",
+        logo: "/business-report.png",
+        data: [
+          "Spent the first month fixing bugs that didn't as look critical but made a world of difference in the UX and significantly reduced complexity in some of the user flows.",
+          "Then led the design and implementation for features like 'Composite Orders', that allowed complex quote creation and helped close giant deals. Also helped in improving DX by fixing our in-house template builder, drastically reducing engineering effort for customised PDF generation to 1/4th.",
+          "Got recognised for speed of execution and excellence of craft after managing ad-hoc customer requests while shipping time-sensitive features without a designer.",
+        ],
+      },
+    ],
+  },
+  {
+    role: "Founding Frontend Engineer",
     title: "Plaza",
     link: "https://useplaza.com",
     duration: "May 2021 - July 2023",
@@ -255,7 +280,7 @@ const companiesData = [
     role: "Frontend Engineer",
     title: "Lirisoft",
     link: "https://www.lirisoft.com",
-    duration: "June 2020 - April 2021",
+    duration: "April 2020 - April 2021",
     styles: {
       textColor: "text-pink-400",
       background: "bg-gradient-to-r from-[#1a1119] to-[#1a111900]",
@@ -267,10 +292,30 @@ const companiesData = [
           "A cross-platform desktop messaging app for a telecommunication giant in U.S.",
         logo: "/messenger.png",
         data: [
-          "I had to pick up three new technologies - Electron, Redux and Typescript on the fly when I joined the startup while fixing bugs but still started contributing to the codebase meaningfully within a few weeks.",
+          "Picked up three new technologies - Electron, Redux and Typescript on the fly when I joined the startup while fixing bugs but still started contributing to the codebase meaningfully within a few weeks.",
           "Got handed over my first feature request when I was just 2 months into the job which was to build an OTP component for our sign up screen and there began the journey of constant learnings and bigger mistakes.",
           "After that I contributed to some important features like implementing virtualisation of conversation lists to improve performance, marking unread messages as read when the user opened that conversation, dynamic search which basically meant that if the user is searching for a particular conversation or contact, they should still be able to see new messages in the list.",
-          "Management had some doubts about hiring a dropout as a fresher amidst COVID when their product was on a tight dealine but I cleared the air up well and got offered an appraisal in < 8 months.",
+          "Management had some doubts about hiring a dropout amidst COVID when their product was on a tight dealine but I cleared the air up well and got offered an appraisal in < 8 months.",
+        ],
+      },
+    ],
+  },
+  {
+    role: "Freelance Web Developer",
+    duration: "Nov 2019 - April 2020",
+    styles: {
+      textColor: "text-violet-400",
+      background: "bg-gradient-to-r from-[#16082c] to-[#16082c00]",
+    },
+    contributionData: [
+      {
+        title: "Websites & Web Apps",
+        summary:
+          "Designing and developing websites for seed startups and individuals.",
+        logo: "/web-design.png",
+        data: [
+          "Started out with Figma as a web designer but got more interested in the development part of it.",
+          "Joined some discord and telegram channels to hunt for clients as well as used platforms like Upwork. Got a few paid gigs for building responsive landing pages with CMS and shifted to building web apps after learning JavaScript and React.",
         ],
       },
     ],
