@@ -211,7 +211,7 @@ const companiesData = [
       {
         title: "Subskribe",
         summary:
-          "A unified quoting, billing, and revenue recognition platform for SaaS companies,",
+          "A unified quoting, billing, and revenue recognition platform for SaaS companies.",
         logo: "/business-report.png",
         data: [
           "Spent the first month fixing bugs that didn't as look critical but made a world of difference in the UX and significantly reduced complexity in some of the user flows.",
