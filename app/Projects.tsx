@@ -60,8 +60,8 @@ export const Projects = () => {
               desc="An ever-growing set of polished animating components,
               leveraging the best of framer motion and inspired from across the web."
               media={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/video/upload/c_fit,h_2160,q_60,w_1440/v1683310460/menu_animation_gns0ji.mov`}
-              githubLink="https://github.com/ExplorerAadi/styling-and-interactions"
-              externalLink="https://styling-and-interactions.vercel.app"
+              githubLink="https://github.com/ExplorerAadi/motion-la-la-land"
+              externalLink="https://motion-la-la-land.vercel.app/"
             />
             <ProjectCard
               title="Google Keep Clone"
