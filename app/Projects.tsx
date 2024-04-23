@@ -47,6 +47,23 @@ export const Projects = () => {
               githubLink="https://github.com/ExplorerAadi/intersection-counter"
             />
             <ProjectCard
+              title="Infinite Grids"
+              desc="a simple and easy to use library that allows you to create
+              a masonry layout with infinite loading while controlling everything
+              about the nodes being rendered in the layout."
+              media={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/video/upload/c_fit,h_2160,q_60,w_1440/v1713819324/zbexnn3xc3uxd3yrttzj.mp4`}
+              githubLink="https://github.com/ExplorerAadi/infinite-grids"
+              externalLink="https://www.npmjs.com/package/infinite-grids"
+            />
+            <ProjectCard
+              title="Motion La La Land"
+              desc="An ever-growing set of polished animating components,
+              leveraging the best of framer motion and inspired from across the web."
+              media={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/video/upload/c_fit,h_2160,q_60,w_1440/v1683310460/menu_animation_gns0ji.mov`}
+              githubLink="https://github.com/ExplorerAadi/motion-la-la-land"
+              externalLink="https://motion-la-la-land.vercel.app/"
+            />
+            <ProjectCard
               title="Google Keep Clone"
               desc="A Google Keep Clone that to replicate their grid UI with
               animations and dark mode including state management using
@@ -54,16 +71,6 @@ export const Projects = () => {
               media={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/video/upload/c_fit,h_2160,q_60,w_1440/v1683310461/google_keep_clone_jgg0tp.mov`}
               githubLink="https://github.com/ExplorerAadi/google-keep-clone"
               externalLink="https://google-keep-clone-mauve.vercel.app"
-            />
-            <ProjectCard
-              title="Styling and Interactions"
-              desc="An ever-growing set of components that are a result of my
-              experiments with micro-interactions. It currently utilizes
-              the best of Tailwind CSS and Framer Motion but I will be
-              adding some 3D ones soon too."
-              media={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/video/upload/c_fit,h_2160,q_60,w_1440/v1683310460/menu_animation_gns0ji.mov`}
-              githubLink="https://github.com/ExplorerAadi/styling-and-interactions"
-              externalLink="https://styling-and-interactions.vercel.app"
             />
           </Masonry>
         </ResponsiveMasonry>
