@@ -56,11 +56,9 @@ export const Projects = () => {
               externalLink="https://www.npmjs.com/package/infinite-grids"
             />
             <ProjectCard
-              title="Styling and Interactions"
-              desc="An ever-growing set of components that are a result of my
-                experiments with micro-interactions. It currently utilizes
-                the best of Tailwind CSS and Framer Motion but I will be
-                adding some 3D ones soon too."
+              title="Motion La La Land"
+              desc="An ever-growing set of polished animating components,
+              leveraging the best of framer motion and inspired from across the web."
               media={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/video/upload/c_fit,h_2160,q_60,w_1440/v1683310460/menu_animation_gns0ji.mov`}
               githubLink="https://github.com/ExplorerAadi/styling-and-interactions"
               externalLink="https://styling-and-interactions.vercel.app"
