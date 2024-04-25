@@ -48,7 +48,7 @@ export const Projects = () => {
             />
             <ProjectCard
               title="Infinite Grids"
-              desc="a simple and easy to use library that allows you to create
+              desc="A simple and easy to use library that allows you to create
               a masonry layout with infinite loading while controlling everything
               about the nodes being rendered in the layout."
               media={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/video/upload/c_fit,h_2160,q_60,w_1440/v1713819324/zbexnn3xc3uxd3yrttzj.mp4`}
