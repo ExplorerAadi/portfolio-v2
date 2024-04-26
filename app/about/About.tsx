@@ -90,9 +90,9 @@ export const About = () => {
                 >
                   Subskribe
                 </a>{" "}
-                - the modern all in one quote-to-revenue platform for SaaS
-                companies and my time is spent between shipping new features and
-                jumping on ad-hoc customer requests.
+                - A unified quoting, billing, and revenue recognition platform
+                for SaaS companies and my time is spent between shipping new
+                features and jumping on ad-hoc customer requests.
               </p>
               <p className="mt-4">
                 Apart from work, you&apos;ll find me reading books, writing
