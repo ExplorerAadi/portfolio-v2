@@ -59,7 +59,7 @@ export const Projects = () => {
               title="Motion La La Land"
               desc="An ever-growing set of polished animating components,
               leveraging the best of framer motion and inspired from across the web."
-              media={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/video/upload/c_fit,h_2160,q_60,w_1440/v1683310460/menu_animation_gns0ji.mov`}
+              media={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/video/upload/c_fit,h_2160,q_60,w_1440/v1717352317/motion-la-la-land.mp4`}
               githubLink="https://github.com/ExplorerAadi/motion-la-la-land"
               externalLink="https://motion-la-la-land.vercel.app/"
             />
