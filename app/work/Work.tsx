@@ -268,7 +268,7 @@ const companiesData = [
         data: [
           "Images are the soul of an e-commerce platform but there was a major problems with ours - the dimension and orientation varied a lot because we didn't control the type of images being uploaded which made the UI inconsistent.",
           "I took the help of a third party provider called Cloudinary to apply on the fly transformations on the image and also control their dpi to preserve the quality while keeping their size small. I optimised it even further in our mobile app by using react-native-fast-image to cache the image on user’s device after the first load.",
-          "Contributed in migrating our apps in a monorepo. We were one of the earliest adopters of Turborepo which also presented some challenges. One of the major ones that I dealt with was triggering a deployment only for the apps which were affected by the respective file changes instead of all of themotion. It ended up saving a couple of extra dollars from being spent on bumping concurrent deployments.",
+          "Contributed in migrating our apps in a monorepo. We were one of the earliest adopters of Turborepo which also presented some challenges. One of the major ones that I dealt with was triggering a deployment only for the apps which were affected by the respective file changes instead of all of them. It ended up saving a couple of extra dollars from being spent on bumping concurrent deployments.",
         ],
       },
     ],

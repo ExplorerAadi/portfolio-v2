@@ -1,6 +1,6 @@
 "use client";
 
-import { MotionConfig, m } from "framer-motion";
+import { MotionConfig, motion } from "framer-motion";
 import Link from "next/link";
 import { useInView } from "react-intersection-observer";
 import {
@@ -16,7 +16,7 @@ export const About = () => {
   return (
     <div className="pt-8 sm:py-32 min-h-[calc(100vh-148px)]" ref={inViewRef}>
       <MotionConfig transition={{ duration: 0.4, ease: "easeIn" }}>
-        {/* <m.div
+        {/* <motion.div
           initial={{ y: -25, opacity: 0 }}
           animate={inView ? { y: 0, opacity: 1 } : { y: -25, opacity: 0 }}
         >
@@ -26,15 +26,15 @@ export const About = () => {
           >
             Hey, I&apos;m Aditya
           </h1>
-        </m.div> */}
+        </motion.div> */}
         <div className="flex-col-reverse flex md:flex-row items-center justify-center h-full md:space-x-10 space-y-4 md:space-y-0">
-          <m.div
+          <motion.div
             initial={{ y: -25, opacity: 0 }}
             animate={inView ? { y: 0, opacity: 1 } : { y: -25, opacity: 0 }}
             transition={{ duration: 0.4, delay: 0.4 }}
             className="w-full mt-4 md:mt-0"
           >
-            <m.div
+            <motion.div
               initial={{ y: -25, opacity: 0 }}
               animate={inView ? { y: 0, opacity: 1 } : { y: -25, opacity: 0 }}
             >
@@ -44,7 +44,7 @@ export const About = () => {
               >
                 Hey, I&apos;m Aditya
               </h1>
-            </m.div>
+            </motion.div>
             <h3
               className="text-2xl sm:text-4xl font-semibold text-white max-w-xl leading-7 sm:leading-10 mt-4"
               style={{ fontFamily: "Lato" }}
@@ -141,8 +141,8 @@ export const About = () => {
                 </a>
               </div>
             </div>
-          </m.div>
-          <m.div
+          </motion.div>
+          <motion.div
             initial={{ y: -25, opacity: 0 }}
             animate={inView ? { y: 0, opacity: 1 } : { y: -25, opacity: 0 }}
             transition={{ duration: 0.4 }}
@@ -154,7 +154,7 @@ export const About = () => {
               src="dp.jpg"
               alt=""
             />
-          </m.div>
+          </motion.div>
         </div>
       </MotionConfig>
     </div>

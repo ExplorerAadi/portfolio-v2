@@ -1,6 +1,6 @@
 "use client";
 
-import { m } from "framer-motion";
+import { motion } from "framer-motion";
 import React from "react";
 import { useInView } from "react-intersection-observer";
 import { ArrowRight } from "../assets/Icons";
@@ -10,7 +10,7 @@ export const Blogs = () => {
 
   return (
     <div ref={inViewRef} className="py-52">
-      <m.div
+      <motion.div
         initial={{ y: -25, opacity: 0 }}
         animate={inView ? { y: 0, opacity: 1 } : { y: -25, opacity: 0 }}
         transition={{ duration: 0.4 }}
@@ -22,7 +22,7 @@ export const Blogs = () => {
         >
           Blogs
         </h2>
-      </m.div>
+      </motion.div>
       <div className="flex flex-col md:flex-row items-center md:space-x-4 justify-center md:justify-start h-full space-y-4 md:space-y-0">
         {blogMetaData.map((metadata) => (
           <LinkPreview metadata={metadata} key={metadata.title} />
