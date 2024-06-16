@@ -156,7 +156,7 @@ const Contribution = ({
         transition={{
           duration: 0.4,
           ease: "easeIn",
-          delay: index > 0 ? 0.4 : 0,
+          delay: index * 0.4,
         }}
       >
         <AnimatePresence>
