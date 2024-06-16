@@ -55,7 +55,11 @@ export const About = () => {
               className="text-gray-300 mt-2"
               style={{ fontFamily: "Work Sans" }}
             >
-              <div>
+              <motion.div
+                initial={{ y: -25, opacity: 0 }}
+                animate={inView ? { y: 0, opacity: 1 } : { y: -25, opacity: 0 }}
+                transition={{ duration: 0.4, delay: 0.5 }}
+              >
                 <p>
                   I dropped out of college to learn some hard skills quickly
                   while building products with startups.
@@ -69,11 +73,11 @@ export const About = () => {
                   Full story here
                   <ArrowRight className="ml-1 w-6 text-gray-600 transition-all duration-300 group-hover:scale-125" />
                 </a>
-              </div>
+              </motion.div>
               <motion.div
-                initial={{ y: -10, opacity: 0 }}
-                animate={inView ? { y: 0, opacity: 1 } : { y: -10, opacity: 0 }}
-                transition={{ duration: 0.4, delay: 0.5 }}
+                initial={{ y: -25, opacity: 0 }}
+                animate={inView ? { y: 0, opacity: 1 } : { y: -25, opacity: 0 }}
+                transition={{ duration: 0.4, delay: 0.9 }}
               >
                 <p className="mt-4">
                   Over the last 4+ years, I&apos;ve built user experiences
@@ -89,9 +93,9 @@ export const About = () => {
                 </Link>
               </motion.div>
               <motion.div
-                initial={{ y: -10, opacity: 0 }}
-                animate={inView ? { y: 0, opacity: 1 } : { y: -10, opacity: 0 }}
-                transition={{ duration: 0.4, delay: 0.9 }}
+                initial={{ y: -25, opacity: 0 }}
+                animate={inView ? { y: 0, opacity: 1 } : { y: -25, opacity: 0 }}
+                transition={{ duration: 0.4, delay: 1.3 }}
               >
                 <p className="mt-4">
                   Currently, I am working at{" "}
@@ -123,9 +127,9 @@ export const About = () => {
                 </Link>
               </motion.div>
               <motion.div
-                initial={{ y: -10, opacity: 0 }}
-                animate={inView ? { y: 0, opacity: 1 } : { y: -10, opacity: 0 }}
-                transition={{ duration: 0.4, delay: 1.3 }}
+                initial={{ y: -25, opacity: 0 }}
+                animate={inView ? { y: 0, opacity: 1 } : { y: -25, opacity: 0 }}
+                transition={{ duration: 0.4, delay: 1.7 }}
               >
                 <h3 className="text-2xl font-semibold text-white max-w-xl leading-7 sm:leading-10 mt-8">
                   Reach out to me
