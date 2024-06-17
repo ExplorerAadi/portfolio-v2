@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { AnimatePresence, m, MotionConfig } from "framer-motion";
+import { AnimatePresence, motion, MotionConfig } from "framer-motion";
 import useMeasure from "react-use-measure";
 import { useInView } from "react-intersection-observer";
 import { ChevronDownIcon } from "../../assets/Icons";
@@ -14,7 +14,7 @@ export const Work = () => {
     <div className="min-h-[calc(100vh-148px)]">
       <MotionConfig transition={{ duration: 0.4, ease: "easeIn" }}>
         <div className="pt-8 sm:pt-32" ref={inViewRef}>
-          <m.div
+          <motion.div
             initial={{ y: -25, opacity: 0 }}
             animate={inView ? { y: 0, opacity: 1 } : { y: -25, opacity: 0 }}
             className="flex flex-col justify-center items-left space-y-6 lg:space-y-16 h-full"
@@ -26,13 +26,13 @@ export const Work = () => {
               Professional highlights
             </h3>
             {/* <p
-            className="text-gray-300 max-w-xl"
-            style={{ fontFamily: "Work Sans" }}
-          >
-            Detailed professional experience showing some of the major
-            contributions I had in my past work.
-          </p> */}
-          </m.div>
+              className="text-gray-300 max-w-xl"
+              style={{ fontFamily: "Work Sans" }}
+            >
+              Detailed professional experience showing some of the major
+              contributions I had in my past work.
+            </p> */}
+          </motion.div>
         </div>
         {companiesData.map((c) => (
           <Companies
@@ -106,10 +106,7 @@ const Companies = ({
           />
         </div>
       </button>
-      <m.div
-        animate={{ height: height || "auto" }}
-        transition={{ duration: 0.8 }}
-      >
+      <motion.div animate={{ height: "auto" }} transition={{ duration: 0.8 }}>
         <div
           className={classNames("my-10", isExpanded ? "pb-24" : "")}
           ref={ref}
@@ -124,7 +121,7 @@ const Companies = ({
             />
           ))}
         </div>
-      </m.div>
+      </motion.div>
     </>
   );
 };
@@ -150,7 +147,7 @@ const Contribution = ({
 
   return (
     <div ref={ref}>
-      <m.div
+      <motion.div
         className="pr-2 sm:px-14 text-gray-100"
         initial={{ y: -20, opacity: 0 }}
         animate={
@@ -159,12 +156,12 @@ const Contribution = ({
         transition={{
           duration: 0.4,
           ease: "easeIn",
-          delay: index > 0 ? 0.4 : 0,
+          delay: index * 0.4,
         }}
       >
         <AnimatePresence>
           {isExpanded && (
-            <m.div exit={{ y: -20, opacity: 0 }}>
+            <motion.div exit={{ y: -20, opacity: 0 }}>
               <div className="flex items-center space-x-4 sm:space-x-5">
                 <div className="sm:w-14 sm:h-14 h-10 w-10 shrink-0 relative my-3">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -185,14 +182,14 @@ const Contribution = ({
                   isLast ? "pb-0" : "pb-12"
                 )}
               >
-                {data.map((d) => (
-                  <p key={d}>{d}</p>
+                {data.map((d, i) => (
+                  <motion.p key={d}>{d}</motion.p>
                 ))}
               </div>
-            </m.div>
+            </motion.div>
           )}
         </AnimatePresence>
-      </m.div>
+      </motion.div>
     </div>
   );
 };
