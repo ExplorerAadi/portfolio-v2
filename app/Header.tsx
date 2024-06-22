@@ -3,42 +3,60 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { classNames } from "../utils";
-import { Fragment } from "react";
+import { useState } from "react";
+import { motion, MotionConfig } from "framer-motion";
 
 export const Header = () => {
   const pathname = usePathname();
+  const [hoveredTab, setHoveredTab] = useState(pathname);
 
   return (
-    <nav className="flex justify-between items-center h-20 text-gray-300">
+    <nav className="flex justify-between items-center h-20 text-gray-500">
       <div className="flex space-x-2 sm:space-x-4 items-center">
-        {links.map((link) => (
-          <Fragment key={link.url}>
-            {link.isExternal ? (
-              <a
-                href="https://blog.exploreraadi.com"
-                target="_blank"
-                rel="noreferrer"
+        <MotionConfig transition={{ type: "spring", bounce: 0, duration: 0.4 }}>
+          <motion.ul
+            layout
+            className="mx-auto flex w-fit gap-2"
+            // onMouseLeave={() => setHoveredTab(pathname)}
+          >
+            {links.map((link) => (
+              <motion.li
+                layout
+                key={link.url}
                 className={classNames(
-                  pathname === link.url ? "bg-white/10" : "bg-transparent",
-                  "rounded-full px-5 py-1 hover:bg-white/10"
+                  pathname === link.url ? "text-white" : "",
+                  "rounded-full px-5 py-1 relative cursor-pointer outline-none transition-colors"
                 )}
+                onMouseOver={() => setHoveredTab(link.url)}
               >
-                {link.title}
-              </a>
-            ) : (
-              <Link
-                key={link.title}
-                href={link.url}
-                className={classNames(
-                  pathname === link.url ? "bg-white/10" : "bg-transparent",
-                  "rounded-full px-5 py-1 hover:bg-white/10"
+                {hoveredTab === link.url && (
+                  <motion.div
+                    layoutId="tab-indicator"
+                    className="absolute inset-0 rounded-lg bg-white/10 z-0"
+                  />
                 )}
-              >
-                {link.title}
-              </Link>
-            )}
-          </Fragment>
-        ))}
+                {link.isExternal ? (
+                  <a
+                    href="https://blog.exploreraadi.com"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="z-10 relative"
+                  >
+                    {link.title}
+                  </a>
+                ) : (
+                  <Link
+                    key={link.title}
+                    href={link.url}
+                    className="z-10 relative"
+                  >
+                    {link.title}
+                  </Link>
+                )}
+              </motion.li>
+            ))}
+          </motion.ul>
+        </MotionConfig>
       </div>
       <div></div>
     </nav>
