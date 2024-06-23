@@ -15,10 +15,12 @@ export default function RootLayout({
       <head />
       <body>
         <LazyMotion features={domAnimation}>
-          <div className="relative max-w-7xl mx-auto px-4 md:px-10">
-            <Header />
-            {children}
-            {/* <Contact /> */}
+          <div className="w-screen">
+            <div className="relative max-w-7xl px-4 md:px-10 mx-auto">
+              <Header />
+              {children}
+              {/* <Contact /> */}
+            </div>
           </div>
         </LazyMotion>
       </body>
