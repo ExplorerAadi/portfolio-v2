@@ -15,13 +15,11 @@ export const Header = () => {
       <div className="flex space-x-2 sm:space-x-4 items-center">
         <MotionConfig transition={{ type: "spring", bounce: 0, duration: 0.4 }}>
           <motion.ul
-            layout
             className="mx-auto flex w-fit gap-2"
             // onMouseLeave={() => setHoveredTab(pathname)}
           >
             {links.map((link) => (
               <motion.li
-                layout
                 key={link.url}
                 className={classNames(
                   pathname === link.url ? "text-white" : "",
