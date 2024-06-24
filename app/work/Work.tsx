@@ -150,7 +150,8 @@ const Contribution = ({
           inView && isExpanded ? { y: 0, opacity: 1 } : { y: -10, opacity: 0 }
         }
         transition={{
-          delay: (index + 1) * 0.4,
+          delay: (index + 1) * 0.2,
+          ease: "easeOut",
         }}
       >
         <AnimatePresence>
@@ -181,7 +182,16 @@ const Contribution = ({
                 )}
               >
                 {data.map((d, i) => (
-                  <motion.p key={d}>{d}</motion.p>
+                  <motion.p
+                    key={d}
+                    initial={{ y: -10, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{
+                      delay: (i + 1) * 0.2,
+                    }}
+                  >
+                    {d}
+                  </motion.p>
                 ))}
               </div>
             </motion.div>
