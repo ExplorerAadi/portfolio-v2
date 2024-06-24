@@ -15,7 +15,7 @@ export const About = () => {
 
   return (
     <div className="pt-8 sm:py-32 min-h-[calc(100vh-148px)]" ref={inViewRef}>
-      <MotionConfig transition={{ duration: 0.4, ease: "easeIn" }}>
+      <MotionConfig transition={{ ease: "easeOut" }}>
         {/* <motion.div
           initial={{ y: -25, opacity: 0 }}
           animate={inView ? { y: 0, opacity: 1 } : { y: -25, opacity: 0 }}
@@ -29,14 +29,14 @@ export const About = () => {
         </motion.div> */}
         <div className="flex-col-reverse flex md:flex-row items-center justify-center h-full md:space-x-10 space-y-4 md:space-y-0">
           <motion.div
-            initial={{ y: -25, opacity: 0 }}
-            animate={inView ? { y: 0, opacity: 1 } : { y: -25, opacity: 0 }}
+            initial={{ y: -10, opacity: 0 }}
+            animate={inView ? { y: 0, opacity: 1 } : { y: -10, opacity: 0 }}
             transition={{ duration: 0.4, delay: 0.4 }}
             className="w-full mt-4 md:mt-0"
           >
             <motion.div
-              initial={{ y: -25, opacity: 0 }}
-              animate={inView ? { y: 0, opacity: 1 } : { y: -25, opacity: 0 }}
+              initial={{ y: -10, opacity: 0 }}
+              animate={inView ? { y: 0, opacity: 1 } : { y: -10, opacity: 0 }}
             >
               <h1
                 className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-violet-500 via-pink-500 to-orange-500 text-4xl sm:text-5xl lg:text-6xl pb-2"
@@ -56,9 +56,9 @@ export const About = () => {
               style={{ fontFamily: "Work Sans" }}
             >
               <motion.div
-                initial={{ y: -25, opacity: 0 }}
-                animate={inView ? { y: 0, opacity: 1 } : { y: -25, opacity: 0 }}
-                transition={{ duration: 0.4, delay: 0.5 }}
+                initial={{ y: -10, opacity: 0 }}
+                animate={inView ? { y: 0, opacity: 1 } : { y: -10, opacity: 0 }}
+                transition={{ duration: 0.4, delay: 0.52 }}
               >
                 <p>
                   I dropped out of college to learn some hard skills quickly
@@ -75,9 +75,9 @@ export const About = () => {
                 </a>
               </motion.div>
               <motion.div
-                initial={{ y: -25, opacity: 0 }}
-                animate={inView ? { y: 0, opacity: 1 } : { y: -25, opacity: 0 }}
-                transition={{ duration: 0.4, delay: 0.9 }}
+                initial={{ y: -10, opacity: 0 }}
+                animate={inView ? { y: 0, opacity: 1 } : { y: -10, opacity: 0 }}
+                transition={{ duration: 0.4, delay: 0.64 }}
               >
                 <p className="mt-4">
                   Over the last 4+ years, I&apos;ve built user experiences
@@ -93,9 +93,9 @@ export const About = () => {
                 </Link>
               </motion.div>
               <motion.div
-                initial={{ y: -25, opacity: 0 }}
-                animate={inView ? { y: 0, opacity: 1 } : { y: -25, opacity: 0 }}
-                transition={{ duration: 0.4, delay: 1.3 }}
+                initial={{ y: -10, opacity: 0 }}
+                animate={inView ? { y: 0, opacity: 1 } : { y: -10, opacity: 0 }}
+                transition={{ duration: 0.4, delay: 0.78 }}
               >
                 <p className="mt-4">
                   Currently, I am working at{" "}
@@ -111,6 +111,12 @@ export const About = () => {
                   for SaaS companies and my time is spent between shipping new
                   features and jumping on ad-hoc customer requests.
                 </p>
+              </motion.div>
+              <motion.div
+                initial={{ y: -10, opacity: 0 }}
+                animate={inView ? { y: 0, opacity: 1 } : { y: -10, opacity: 0 }}
+                transition={{ duration: 0.4, delay: 0.9 }}
+              >
                 <p className="mt-4">
                   Apart from work, you&apos;ll find me reading books, writing
                   blogs, tinkering with latest technologies or interacting with
@@ -127,9 +133,9 @@ export const About = () => {
                 </Link>
               </motion.div>
               <motion.div
-                initial={{ y: -25, opacity: 0 }}
-                animate={inView ? { y: 0, opacity: 1 } : { y: -25, opacity: 0 }}
-                transition={{ duration: 0.4, delay: 1.7 }}
+                initial={{ y: -10, opacity: 0 }}
+                animate={inView ? { y: 0, opacity: 1 } : { y: -10, opacity: 0 }}
+                transition={{ duration: 0.4, delay: 1.02 }}
               >
                 <h3 className="text-2xl font-semibold text-white max-w-xl leading-7 sm:leading-10 mt-8">
                   Reach out to me
@@ -167,8 +173,8 @@ export const About = () => {
             </div>
           </motion.div>
           <motion.div
-            initial={{ y: -25, opacity: 0 }}
-            animate={inView ? { y: 0, opacity: 1 } : { y: -25, opacity: 0 }}
+            initial={{ y: -10, opacity: 0 }}
+            animate={inView ? { y: 0, opacity: 1 } : { y: -10, opacity: 0 }}
             transition={{ duration: 0.4 }}
             className="w-full"
           >
