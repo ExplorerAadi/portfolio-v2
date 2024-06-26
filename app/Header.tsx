@@ -51,16 +51,6 @@ export const Header = () => {
                     {link.title}
                   </Link>
                 )}
-                <a
-                  href={`${window.location.origin}/${window.encodeURIComponent(
-                    "Aditya Raj - Frontend Resume.pdf"
-                  )}`}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="z-10 relative"
-                >
-                  Resume
-                </a>
               </motion.li>
             ))}
           </motion.ul>
@@ -90,6 +80,11 @@ const links = [
   {
     title: "Blog",
     url: "https://blog.exploreraadi.com",
+    isExternal: true,
+  },
+  {
+    title: "Resume",
+    url: "/Aditya_Raj_Frontend_Resume.pdf",
     isExternal: true,
   },
 ];
