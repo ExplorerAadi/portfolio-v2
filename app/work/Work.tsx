@@ -229,7 +229,7 @@ const companiesData = [
   {
     role: "Founding Frontend Engineer",
     title: "Plaza",
-    link: "https://useplaza.com",
+    link: "https://web.archive.org/web/20230205014049/https://www.useplaza.com",
     duration: "May 2021 - July 2023",
     styles: {
       textColor: "text-violet-400",

@@ -35,7 +35,7 @@ export const Header = () => {
                 )}
                 {link.isExternal ? (
                   <a
-                    href="https://blog.exploreraadi.com"
+                    href={link.url}
                     target="_blank"
                     rel="noreferrer"
                     className="z-10 relative"
@@ -80,6 +80,11 @@ const links = [
   {
     title: "Blog",
     url: "https://blog.exploreraadi.com",
+    isExternal: true,
+  },
+  {
+    title: "Resume",
+    url: "/Aditya_Raj_Frontend_Resume.pdf",
     isExternal: true,
   },
 ];
