@@ -77,11 +77,11 @@ const links = [
     url: "/about",
     isExternal: false,
   },
-  {
-    title: "Blog",
-    url: "https://blog.exploreraadi.com",
-    isExternal: true,
-  },
+  // {
+  //   title: "Blog",
+  //   url: "https://blog.exploreraadi.com",
+  //   isExternal: true,
+  // },
   {
     title: "Resume",
     url: "/Aditya_Raj_Frontend_Resume.pdf",
