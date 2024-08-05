@@ -39,7 +39,7 @@ export const About = () => {
               animate={inView ? { y: 0, opacity: 1 } : { y: -10, opacity: 0 }}
             >
               <h1
-                className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-violet-500 via-pink-500 to-orange-500 text-4xl sm:text-5xl lg:text-6xl pb-2"
+                className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-violet-500 via-pink-500 to-orange-500 text-4xl sm:text-5xl lg:text-6xl lg:pb-2 pt-4 lg:pt-0"
                 style={{ fontFamily: "Lato" }}
               >
                 Hey, I&apos;m Aditya

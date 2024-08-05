@@ -84,8 +84,8 @@ const Companies = ({
         )}
         onClick={() => setIsExpanded(!isExpanded)}
       >
-        <div className="flex flex-col items-start sm:block">
-          {role}{" "}
+        <div className="flex flex-col items-start justify-start sm:block">
+          <span className="text-start">{role}</span>
           {title && (
             <a
               className={classNames("hover:underline", styles.textColor)}
