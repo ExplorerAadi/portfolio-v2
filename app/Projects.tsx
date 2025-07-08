@@ -43,14 +43,14 @@ export const Projects = () => {
               desc="A library to track the count of elements yet to enter the
               viewport and be used to build features like unread count of
               unread messages."
-              media={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/video/upload/c_fit,h_2160,q_60,w_1440/v1683310461/intersection_counter_guo2zq.mov`}
+              media={`/Intersection-Counter.mov`}
               githubLink="https://github.com/ExplorerAadi/intersection-counter"
             />
             <ProjectCard
               title="Motion La La Land"
               desc="An ever-growing set of polished animating components,
                   leveraging the best of framer motion and inspired from across the web."
-              media={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/video/upload/c_fit,h_2160,q_60,w_1440/v1726941167/motion-land-demo.mp4`}
+              media={`/Motion-La-La-Land.mp4`}
               githubLink="https://github.com/ExplorerAadi/motion-la-la-land"
               externalLink="https://motion-la-la-land.vercel.app/"
             />
@@ -59,11 +59,11 @@ export const Projects = () => {
               desc="A simple and easy to use library that allows you to create
               a masonry layout with infinite loading while controlling everything
               about the nodes being rendered in the layout."
-              media={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/video/upload/c_fit,h_2160,q_60,w_1440/v1713819324/zbexnn3xc3uxd3yrttzj.mp4`}
+              media={"/Art-Gallery.mp4"}
               githubLink="https://github.com/ExplorerAadi/infinite-grids"
               externalLink="https://www.npmjs.com/package/infinite-grids"
             />
-            <ProjectCard
+            {/* <ProjectCard
               title="Google Keep Clone"
               desc="A Google Keep Clone that to replicate their grid UI with
                 animations and dark mode including state management using
@@ -71,7 +71,7 @@ export const Projects = () => {
               media={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/video/upload/c_fit,h_2160,q_60,w_1440/v1683310461/google_keep_clone_jgg0tp.mov`}
               githubLink="https://github.com/ExplorerAadi/google-keep-clone"
               externalLink="https://google-keep-clone-mauve.vercel.app"
-            />
+            /> */}
           </Masonry>
         </ResponsiveMasonry>
       </div>
