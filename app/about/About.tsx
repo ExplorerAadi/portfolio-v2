@@ -61,8 +61,8 @@ export const About = () => {
                 transition={{ duration: 0.4, delay: 0.52 }}
               >
                 <p>
-                  I dropped out of college to learn some hard skills quickly
-                  while building products with startups.
+                  I traded lecture hall for the startup world to learn hard
+                  skills faster.
                 </p>
                 <a
                   href="https://blog.exploreraadi.com/developer-journey-of-a-failure-student"
@@ -80,9 +80,11 @@ export const About = () => {
                 transition={{ duration: 0.4, delay: 0.64 }}
               >
                 <p className="mt-4">
-                  Over the last 4+ years, I&apos;ve built user experiences
-                  across different domains of frontend engineering including web
-                  apps, mobile apps, and even desktop apps.{" "}
+                  I have spent the last 6 years in the trenches, turning
+                  ambitious ideas into polished products across different
+                  domains of frontend engineering including web, mobile, and
+                  even desktop apps, now doubling down on the application layer
+                  of AI.
                 </p>
                 <Link
                   href={"/work"}
@@ -118,17 +120,16 @@ export const About = () => {
                 transition={{ duration: 0.4, delay: 0.9 }}
               >
                 <p className="mt-4">
-                  Apart from work, you&apos;ll find me reading books, writing
-                  blogs, tinkering with latest technologies or interacting with
-                  industry professionals either on Twitter or in-person because
-                  I love to listen to their journeys and learn from their
-                  experiences.
+                  Apart from work, you&apos;ll find me working on some side
+                  hustles, exploring new cafe/restaurant, or interacting
+                  with people either on X or in-person because I
+                  love to listen to their journeys. Everyone has a story to tell and if you&apos;re lucky enough then something to teach.
                 </p>
                 <Link
                   href={"/"}
                   className="items-center inline-flex text-gray-600 group transition-all duration-300 hover:border-b-gray-600 border-b border-b-transparent"
                 >
-                  Checkout my projects
+                  Checkout my side hustles
                   <ArrowRight className="ml-1 w-6 text-gray-600 transition-all duration-300 group-hover:scale-125" />
                 </Link>
               </motion.div>

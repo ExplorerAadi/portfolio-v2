@@ -85,7 +85,7 @@ const Companies = ({
         onClick={() => setIsExpanded(!isExpanded)}
       >
         <div className="flex flex-col items-start justify-start sm:block">
-          <span className="text-start">{role}</span>
+          <span className="text-start">{role} </span>
           {title && (
             <a
               className={classNames("hover:underline", styles.textColor)}
@@ -219,9 +219,13 @@ const companiesData = [
           "A unified quoting, billing, and revenue recognition platform for SaaS companies.",
         logo: "/business-report.png",
         data: [
-          "Spent the first month fixing bugs that didn't as look critical but made a world of difference in the UX and significantly reduced complexity in some of the user flows.",
-          "Then led the design and implementation for features like 'Composite Orders', that allowed complex quote creation and helped close giant deals. Also helped in improving DX by fixing our in-house template builder, drastically reducing engineering effort for customised PDF generation to 1/4th.",
-          "Got recognised for speed of execution and excellence of craft after managing ad-hoc customer requests while shipping time-sensitive features without a designer.",
+          "Engineered 'Composite Orders' feature enabling complex quote generation that helped close $400k+ deals and significantly reduced quote creation time for enterprise customers.",
+
+          "Designed and developed Salesroom - the company's most visually polished product - without a designer, managing the entire product lifecycle from prd to launch.",
+
+          "Owned ~50% of CPQ-related features mentioned in company website's release notes and delivered key enhancements that reduced engineering effort for customized PDF generation to 1/4th through an improved in-house template builder.",
+
+          "Recognized for communication skills, ownership and execution speed after managing ad-hoc customer requests while shipping time-sensitive features.",
         ],
       },
     ],

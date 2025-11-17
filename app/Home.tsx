@@ -34,7 +34,7 @@ export const Home = () => {
         <div className="mr-10 md:m-0 max-w-2xl min-h-[40%] min-w-[40%]">
           <motion.img
             className="h-full w-full object-contain"
-            src={`/3D-Boy-Asset.png`}
+            src="https://pub-84559be953a840e39a097eff253d654a.r2.dev/3D-Boy-Asset.png"
             alt=""
             ref={inViewRef}
             initial={{ y: -25, opacity: 0 }}

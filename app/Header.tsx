@@ -84,7 +84,7 @@ const links = [
   // },
   {
     title: "Resume",
-    url: "/Aditya_Raj_Frontend_Resume.pdf",
+    url: "https://drive.google.com/file/d/1greGpkf--yVifNQceGVG5JXzF11dPqWo/view?usp=sharing",
     isExternal: true,
   },
 ];
